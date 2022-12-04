@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._3_matches_game.HelloController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c7c7c" height="525.0" layoutX="-11.0" layoutY="-27.0" stroke="BLACK" strokeType="INSIDE" width="665.0" />
       <Circle fill="#515151" layoutX="14.0" layoutY="293.0" radius="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -16,7 +16,7 @@
       <Circle fill="#515151" layoutX="245.0" layoutY="-38.0" radius="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#515151" layoutX="43.0" layoutY="111.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#474343" height="62.0" layoutX="83.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
-      <Label fx:id="countMatches" alignment="CENTER" layoutX="303.0" layoutY="58.0" prefHeight="43.0" prefWidth="42.0" text="0" textAlignment="JUSTIFY" textFill="WHITE">
+      <Label fx:id="countMatches" alignment="CENTER" layoutX="303.0" layoutY="58.0" prefHeight="43.0" prefWidth="42.0" text="37" textAlignment="JUSTIFY" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>
@@ -28,7 +28,7 @@
       </Label>
       <Circle fill="#515151" layoutX="626.0" layoutY="455.0" radius="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#515151" layoutX="699.0" layoutY="257.0" radius="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <TextField fx:id="textField" alignment="CENTER" centerShape="false" focusTraversable="false" layoutX="239.0" layoutY="117.0" onAction="#textFieldCheck" prefHeight="58.0" prefWidth="124.0" promptText="ЧИСЛО" scaleShape="false">
+      <TextField fx:id="textField" alignment="CENTER" centerShape="false" focusTraversable="false" layoutX="239.0" layoutY="117.0" onKeyTyped="#textFieldCheck" prefHeight="58.0" prefWidth="124.0" promptText="ЧИСЛО" scaleShape="false">
          <font>
             <Font size="25.0" />
          </font>
