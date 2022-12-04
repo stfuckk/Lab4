@@ -27,7 +27,7 @@ public class Server{
             byte[] b = new byte[8];
             for(int i = 0; i < 8; i++)
                 b[i] = (byte) in.read();
-            double number2 = ByteBuffer.wrap(a).getDouble();
+            double number2 = ByteBuffer.wrap(b).getDouble();
             System.out.println("Second number: " + number2);
 
             //Принимаем и записываем знак оператора

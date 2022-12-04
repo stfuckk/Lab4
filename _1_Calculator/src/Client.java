@@ -36,12 +36,14 @@ public class Client {
                 System.out.println("Error: /0");
 
             else {
-                byte[] _firstNumberByteArray = new byte[8], _secondNumberByteArray = new byte[8];
+                byte[] _firstNumberByteArray = new byte[8];
+                byte[] _secondNumberByteArray = new byte[8];
                 ByteBuffer.wrap(_firstNumberByteArray).putDouble(Double.parseDouble(input[0])); //добавляем в буффер число в виде double
                 out.write(_firstNumberByteArray); //отправляем через поток вывода на сервер
 
                 ByteBuffer.wrap(_secondNumberByteArray).putDouble(Double.parseDouble(input[1]));
                 out.write(_secondNumberByteArray);
+
                 out.write(input[2].getBytes()); //отправляем оператор на сервер
 
                 byte[] a = new byte[8];

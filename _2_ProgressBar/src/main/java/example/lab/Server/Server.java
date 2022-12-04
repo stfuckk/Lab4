@@ -57,7 +57,6 @@ public class Server {
                             }
                         } catch (IOException e) {throw new RuntimeException(e);}
                     }
-
                     char[] b = new char[length];
                     for(int i = 0; i<length; i++)
                         b[i] = a[i]; //помещаем отобранные символы

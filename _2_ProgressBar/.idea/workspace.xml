@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d08d4da4-5909-4036-bfcc-832e45a72dce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../_3_matches_game/src/main/java/com/example/_3_matches_game/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_1_Calculator/out/production/_1_Calculator/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_1_Calculator/out/production/_1_Calculator/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_1_Calculator/out/production/_1_Calculator/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_1_Calculator/out/production/_1_Calculator/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_1_Calculator/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_1_Calculator/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../_1_Calculator/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_1_Calculator/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/lab/Controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/lab/Controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/lab/model/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/lab/model/api/ModelAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/lab/model/api/Updatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/example/lab/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/example/lab/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/lab/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/lab/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <recent name="G:\Labs\lab3_ProgressBar\lab\src\main\java\example\lab\Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="example.lab.HelloApplication" />
       <module name="lab" />
