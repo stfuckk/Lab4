@@ -13,6 +13,7 @@ public class Server{
         Socket socket = _serverSocket.accept();
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
+	System.out.println("Connected!");
 
         while(true){
             //Принимаем и записываем первое число в буффер

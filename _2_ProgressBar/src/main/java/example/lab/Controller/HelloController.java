@@ -4,79 +4,64 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import example.lab.model.Model;
-import example.lab.model.api.ModelAPI;
-import example.lab.model.api.Updatable;
+
+import example.lab.Client.IClient;
+import example.lab.Client.ClientFactory;
+import example.lab.Client.Client;
+
+import java.io.IOException;
 
 public class HelloController {
+    private IClient client;
+
     @FXML
     ProgressBar pBar;
+    @FXML
+    private Button startButton;
     @FXML
     private Button pauseButton;
     @FXML
     Button stopButton;
-    ////////////////////////////////////////
-    private boolean isStarted = false;
-    private boolean isPaused = false;
-    ///////////////////////////////////////
-    ModelAPI model;
     @FXML
-    private void StartProgress(){
-        /*boolean a = false;
-        while (!a){
-            pBar.setProgress(pBar.getProgress() + 1);
-        }*/
-        if (!isStarted) {
-            Restart();
+    private void StartProgress() throws IOException {
+        if (startButton.getText().equals("Старт"))
+        {
+            startButton.setText("Перезапуск");
+            pauseButton.setDisable(false);
+            stopButton.setDisable(false);
+            client.startCalcProgress(value -> Platform.runLater(() -> pBar.setProgress(value)));
         }
-
-        else if(isStarted){
-            model.interrupt();
-            reset();
-            Restart();
+        else{
+            pauseButton.setText("Пауза");
+            client.restart();
         }
     }
 
     @FXML
-    private void PauseProgress(){
-        if(!isPaused){
-            model.pause();
-            isPaused = true;
+    private void PauseProgress() throws IOException {
+        if(pauseButton.getText().equals("Пауза")){
+            client.pause();
             pauseButton.setText("Продолжить");
         }
         else{
-            model.resume();
-            isPaused = false;
+            client.resume();
             pauseButton.setText("Пауза");
         }
     }
 
     @FXML
-    private void StopProgress(){
-        model.stop();
-        reset();
-    }
-
-
-    private void Restart(){
-        model = new Model(1000, new Updatable() {
-            @Override
-            public void update(double value) {
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        pBar.setProgress(model.calcProgress(value, 1000));
-                    }
-                });
-            }
-        });
-        isStarted = true;
-        model.start();
-    }
-
-    private void reset(){
-        isStarted = false;
+    private void StopProgress() throws IOException {
+        client.stop();
+        startButton.setText("Старт");
         pauseButton.setText("Пауза");
-        isPaused = false;
+        pauseButton.setDisable(true);
+        stopButton.setDisable(true);
+    }
+
+    @FXML
+    void initialize()
+    {
+        ClientFactory clientFactory = new ClientFactory();
+        client = clientFactory.createInstance();
     }
 }
